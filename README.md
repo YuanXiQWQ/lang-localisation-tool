@@ -28,10 +28,6 @@
 该项目目前主要由本人维护，并逐渐更新为现在的 `comparator.html`。  
 由于本人也有 BSL 光影的汉化项目，因此将 `comparator.html` 改写为适配 Minecraft `.lang` 文件的版本。
 
-> 原项目的 `comparator.html` 中，有关“有道智云 API”调用的部分不是我的代码。  
-> 由于原项目没有许可证，理论上按照默认版权法处理，我大概是没有权利直接使用，  
-> 因此在本项目中该功能已移除。未来可能使用 `axios` 重写该方法（原方法使用 jQuery 的 `$.ajax()`），但目前我用不上所以就先鸽着...
-
 ### 安装
 
 1. 克隆项目仓库
@@ -73,7 +69,7 @@
 
 ### Table of Contents
 
-[Introduction](#introduction) | [Features](#features) | [Credits](#credits) | [Installation](#installation) | [Usage](#usage) | [Configuration Details](#configuration-details) | [Troubleshooting](#troubleshooting) | [License](#license)
+[Introduction](#introduction) | [Features](#features) | [Credits](#credits) | [Installation](#installation) | [Usage](#usage) | [Configuration Details](#configuration-details) | [Troubleshooting](#troubleshooting) | [Licence](#licence)
 
 ### Introduction
 
@@ -92,10 +88,6 @@ A web-based tool for automatically localising Minecraft `.lang` language files. 
 The code is derived from the [gitkraken-chinese](https://github.com/yk47g/gitkraken-chinese) project, specifically from the `compare.html` file constructed by [@DreamSaddle](https://github.com/DreamSaddle).  
 This project is primarily maintained by me and is gradually being updated to the current `comparator.html`.  
 Since I also manage a BSL shader Chinese localisation project, I have adapted `comparator.html` to suit Minecraft `.lang` files.
-
-> In the original project's `comparator.html`, the sections regarding the "Youdao Intelligent Cloud API" calls were not my code.  
-> Since the original project did not include a license, and by default copyright law, this function may not be used directly,  
-> I have removed this functionality from the current project. It may be rewritten in the future using `axios` (the original used jQuery’s `$.ajax()`), but for now it remains unimplemented.
 
 ### Installation
 
@@ -122,7 +114,8 @@ Since I also manage a BSL shader Chinese localisation project, I have adapted `c
 - **API Call Failure:** Check whether the API configuration is correct and if the network connection is stable. For DeepSeek, please monitor its service status.
 - **No Difference Detected:** Ensure that there are indeed differences between the new and old source language files.
 
-### License
+### Licence
 
-This project is licensed under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) license. This license has
+This project is licenced under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) licence.
+This licence has
 [unofficial translated versions](https://www.gnu.org/licenses/translations.en.html), for reference only.

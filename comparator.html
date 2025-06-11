@@ -213,7 +213,7 @@
           <select id="apiSelector" v-model="selectedApi" class="selectForm">
             <option value="openai">OpenAI</option>
             <option value="deepseek">DeepSeek</option>
-            <!--            <option value="youdao">有道智云</option>-->
+            <option value="youdao">有道智云</option>
           </select>
         </div>
 
@@ -223,13 +223,13 @@
             <label for="openaiApiKey">OpenAI API 密钥:</label>
             <input type="text" id="openaiApiKey" v-model="openai.apiKey" placeholder="以 sk- 开头" class="selectForm">
           </div>
-          <div class='input-group'>
-            <label for='modelSelector'>选择模型:</label>
-            <select id='modelSelector' v-model='openai.model' class="selectForm">
-              <option value='gpt-4o-mini'>4o-mini</option>
-              <option value='gpt-4o'>4o</option>
-              <option value='o1-mini'>o1-mini</option>
-              <option value='o3-mini'>o3-mini</option>
+          <div class="input-group">
+            <label for="modelSelector">选择模型:</label>
+            <select id="modelSelector" v-model="openai.model" class="selectForm">
+              <option value="gpt-4o-mini">4o-mini</option>
+              <option value="gpt-4o">4o</option>
+              <option value="o1-mini">o1-mini</option>
+              <option value="o3-mini">o3-mini</option>
             </select>
           </div>
         </div>
@@ -241,11 +241,11 @@
             <input type="text" id="deepseekApiKey" v-model="deepseek.apiKey" placeholder="以 sk- 开头"
                    class="selectForm">
           </div>
-          <div class='input-group'>
-            <label for='deepseekModel'>选择模型:</label>
-            <select id='deepseekModel' v-model='deepseek.model' class="selectForm">
-              <option value='deepseek-chat'>V3</option>
-              <option value='deepseek-reasoner'>R1</option>
+          <div class="input-group">
+            <label for="deepseekModel">选择模型:</label>
+            <select id="deepseekModel" v-model="deepseek.model" class="selectForm">
+              <option value="deepseek-chat">V3</option>
+              <option value="deepseek-reasoner">R1</option>
             </select>
           </div>
         </div>
@@ -432,22 +432,22 @@
           </p>
         </details>
 
-        <!--        <details>-->
-        <!--          <summary><b>有道API的申请步骤</b></summary>-->
-        <!--          <ol class="introduction-list">-->
-        <!--            <li class="introduction-list-li">-->
-        <!--              进入 <a href="https://ai.youdao.com/console/#/service-singleton/text-translation"-->
-        <!--                      target="_blank">有道智云控制台</a>-->
-        <!--            </li>-->
-        <!--            <li class="introduction-list-li">注册或登录</li>-->
-        <!--            <li class="introduction-list-li">在侧边栏选择 "自然语言翻译服务/文本翻译"</li>-->
-        <!--            <li class="introduction-list-li">找到 "文本翻译/应用概览/创建应用"</li>-->
-        <!--            <li class="introduction-list-li">创建应用并复制 AppKey 和 AppSecret 到配置中</li>-->
-        <!--          </ol>-->
-        <!--          <p class="hint">-->
-        <!--            <a href="https://ai.youdao.com/price-center.s#servicename=fanyi-text" target="_blank">收费标准</a>-->
-        <!--          </p>-->
-        <!--        </details>-->
+        <details>
+          <summary><b>有道API的申请步骤</b></summary>
+          <ol class="introduction-list">
+            <li class="introduction-list-li">
+              进入 <a href="https://ai.youdao.com/console/#/service-singleton/text-translation"
+                      target="_blank">有道智云控制台</a>
+            </li>
+            <li class="introduction-list-li">注册或登录</li>
+            <li class="introduction-list-li">在侧边栏选择 "自然语言翻译服务/文本翻译"</li>
+            <li class="introduction-list-li">找到 "文本翻译/应用概览/创建应用"</li>
+            <li class="introduction-list-li">创建应用并复制 AppKey 和 AppSecret 到配置中</li>
+          </ol>
+          <p class="hint">
+            <a href="https://ai.youdao.com/price-center.s#servicename=fanyi-text" target="_blank">收费标准</a>
+          </p>
+        </details>
         <p id="copyright">© 2025 <a href="https://github.com/YuanXiQWQ" target="_blank">YuanXiQWQ</a></p>
       </fieldset>
     </div>
@@ -546,102 +546,102 @@ const app = new Vue({
       fixedTranslations: {
         zhCN: [
           // 游戏名词
-          {term: "Bloom", translation: "泛光"},
-          {term: "Fog", translation: "雾"},
-          {term: "Biomes", translation: "生物群系"},
-          {term: "Mesa", translation: "恶地"},
-          {term: "Badland", translation: "恶地"},
-          {term: "Swamp", translation: "沼泽"},
-          {term: "Mushroom Island", translation: "蘑菇岛"},
-          {term: "Savanna", translation: "热带草原"},
-          {term: "Jungle", translation: "丛林"},
-          {term: "Superflat", translation: "超平坦世界"},
-          {term: "Superflat world", translation: "超平坦世界"},
-          {term: "Overworld", translation: "主世界"},
-          {term: "Nether", translation: "下界"},
-          {term: "End", translation: "末地"},
-          {term: "Slime blocks", translation: "黏液块"},
+          {term: 'Bloom', translation: '泛光'},
+          {term: 'Fog', translation: '雾'},
+          {term: 'Biomes', translation: '生物群系'},
+          {term: 'Mesa', translation: '恶地'},
+          {term: 'Badland', translation: '恶地'},
+          {term: 'Swamp', translation: '沼泽'},
+          {term: 'Mushroom Island', translation: '蘑菇岛'},
+          {term: 'Savanna', translation: '热带草原'},
+          {term: 'Jungle', translation: '丛林'},
+          {term: 'Superflat', translation: '超平坦世界'},
+          {term: 'Superflat world', translation: '超平坦世界'},
+          {term: 'Overworld', translation: '主世界'},
+          {term: 'Nether', translation: '下界'},
+          {term: 'End', translation: '末地'},
+          {term: 'Slime blocks', translation: '黏液块'},
 
           // 光影名词
-          {term: "Caustics", translation: "焦散"},
-          {term: "DoF", translation: "景深"},
-          {term: "Glow", translation: "辉光"},
-          {term: "Shader", translation: "光影"},
-          {term: "Resource Pack", translation: "材质包"},
-          {term: "Ghosting", translation: "鬼影"},
-          {term: "Realtime Shadows", translation: "实时阴影"},
-          {term: "Light shaft", translation: "光束"},
-          {term: "Lens Flare", translation: "镜头光晕"},
+          {term: 'Caustics', translation: '焦散'},
+          {term: 'DoF', translation: '景深'},
+          {term: 'Glow', translation: '辉光'},
+          {term: 'Shader', translation: '光影'},
+          {term: 'Resource Pack', translation: '材质包'},
+          {term: 'Ghosting', translation: '鬼影'},
+          {term: 'Realtime Shadows', translation: '实时阴影'},
+          {term: 'Light shaft', translation: '光束'},
+          {term: 'Lens Flare', translation: '镜头光晕'},
         ],
         zhTW: [
           // 游戏名词
-          {term: "Bloom", translation: "泛光"},
-          {term: "Fog", translation: "霧"},
-          {term: "Biomes", translation: "生態域"},
-          {term: "Mesa", translation: "惡地"},
-          {term: "Badland", translation: "惡地"},
-          {term: "Swamp", translation: "沼澤"},
-          {term: "Mushroom Island", translation: "蘑菇地"},
-          {term: "Savanna", translation: "莽原"},
-          {term: "Jungle", translation: "叢林"},
-          {term: "Superflat", translation: "超平坦世界"},
-          {term: "Superflat world", translation: "超平坦世界"},
-          {term: "Overworld", translation: "主世界"},
-          {term: "Nether", translation: "地獄"},
-          {term: "End", translation: "終界"},
-          {term: "Slime blocks", translation: "史萊姆方塊"},
+          {term: 'Bloom', translation: '泛光'},
+          {term: 'Fog', translation: '霧'},
+          {term: 'Biomes', translation: '生態域'},
+          {term: 'Mesa', translation: '惡地'},
+          {term: 'Badland', translation: '惡地'},
+          {term: 'Swamp', translation: '沼澤'},
+          {term: 'Mushroom Island', translation: '蘑菇地'},
+          {term: 'Savanna', translation: '莽原'},
+          {term: 'Jungle', translation: '叢林'},
+          {term: 'Superflat', translation: '超平坦世界'},
+          {term: 'Superflat world', translation: '超平坦世界'},
+          {term: 'Overworld', translation: '主世界'},
+          {term: 'Nether', translation: '地獄'},
+          {term: 'End', translation: '終界'},
+          {term: 'Slime blocks', translation: '史萊姆方塊'},
           // 光影名词
-          {term: "DoF", translation: "景深"},
-          {term: "Glow", translation: "輝光"},
-          {term: "Shader", translation: "光影"},
-          {term: "Resource Pack", translation: "材質包"},
-          {term: "Ghosting", translation: "鬼影"},
-          {term: "Realtime Shadows", translation: "實時陰影"},
-          {term: "Light shaft", translation: "光束"},
-          {term: "Lens Flare", translation: "鏡頭光暈"},
+          {term: 'DoF', translation: '景深'},
+          {term: 'Glow', translation: '輝光'},
+          {term: 'Shader', translation: '光影'},
+          {term: 'Resource Pack', translation: '材質包'},
+          {term: 'Ghosting', translation: '鬼影'},
+          {term: 'Realtime Shadows', translation: '實時陰影'},
+          {term: 'Light shaft', translation: '光束'},
+          {term: 'Lens Flare', translation: '鏡頭光暈'},
           // 台湾正体独有名词
           // 游戏名词
           // 光影名词
-          {term: "Anti-aliasing", translation: "反鋸齒"},
-          {term: "Load", translation: "載入"},
-          {term: "GPU", translation: "顯示卡"},
-          {term: "Hardcode", translation: "寫死"},
-          {term: "Default", translation: "預設"},
-          {term: "Setting", translation: "設置"},
-          {term: "Noise", translation: "雜訊"},
-          {term: "Video Settings", translation: "影片設置"},
-          {term: "Realtime", translation: "實時"},
-          {term: "Motion Blur", translation: "動態模糊"},
-          {term: "Smart", translation: "智慧"},
-          {term: "Compatible", translation: "相容"},
-          {term: "Horizontal Position", translation: "水準位置"},
+          {term: 'Anti-aliasing', translation: '反鋸齒'},
+          {term: 'Load', translation: '載入'},
+          {term: 'GPU', translation: '顯示卡'},
+          {term: 'Hardcode', translation: '寫死'},
+          {term: 'Default', translation: '預設'},
+          {term: 'Setting', translation: '設置'},
+          {term: 'Noise', translation: '雜訊'},
+          {term: 'Video Settings', translation: '影片設置'},
+          {term: 'Realtime', translation: '實時'},
+          {term: 'Motion Blur', translation: '動態模糊'},
+          {term: 'Smart', translation: '智慧'},
+          {term: 'Compatible', translation: '相容'},
+          {term: 'Horizontal Position', translation: '水準位置'},
         ]
       },
 
       // 需要保留的专有名词数组
       keepTranslations: [
-        "Perlin",
-        "Worley",
-        "Blocky",
-        "Optifine",
+        'Perlin',
+        'Worley',
+        'Blocky',
+        'Optifine',
       ]
-    }
+    };
   },
   methods: {
     /**
      * 导出文件
      */
     exportFile() {
-      const content = document.getElementById("textFile").value;
+      const content = document.getElementById('textFile').value;
       if (!content.trim()) {
-        alert("没有可以导出的内容");
+        alert('没有可以导出的内容');
         return;
       }
 
-      const blob = new Blob([content], {type: "text/plain"});
-      const link = document.createElement("a");
+      const blob = new Blob([content], {type: 'text/plain'});
+      const link = document.createElement('a');
       link.href = URL.createObjectURL(blob);
-      link.download = "result.lang";
+      link.download = 'result.lang';
       link.click();
 
       URL.revokeObjectURL(link.href);
@@ -653,16 +653,16 @@ const app = new Vue({
      * @returns {Promise<void>} 标明方法类型,不用管
      */
     async copyToClipboard() {
-      const content = document.getElementById("textFile").value;
+      const content = document.getElementById('textFile').value;
       if (!content.trim()) {
-        alert("没有可以复制的内容");
+        alert('没有可以复制的内容');
         return;
       }
 
       try {
         await navigator.clipboard.writeText(content);
       } catch (e) {
-        alert("复制失败，请手动复制");
+        alert('复制失败，请手动复制');
       }
     },
 
@@ -685,7 +685,7 @@ const app = new Vue({
       }
       const fileInput = document.getElementById(inputId);
       if (!fileInput.files[0]) {
-        alert("未选择文件");
+        alert('未选择文件');
         return;
       }
       const reader = new FileReader();
@@ -786,7 +786,7 @@ const app = new Vue({
       });
 
       if (!this.diffItems.length) {
-        alert("未发现差异");
+        alert('未发现差异');
       }
 
       this.autoGen();
@@ -882,17 +882,17 @@ const app = new Vue({
       // 验证API配置
       if (this.selectedApi === 'openai') {
         if (!this.openai.apiKey) {
-          alert("请填写OpenAI API密钥");
+          alert('请填写OpenAI API密钥');
           return;
         }
       } else if (this.selectedApi === 'deepseek') {
         if (!this.deepseek.apiKey) {
-          alert("请填写DeepSeek API密钥");
+          alert('请填写DeepSeek API密钥');
           return;
         }
       } else if (this.selectedApi === 'youdao') {
         if (!this.youdao.appKey || !this.youdao.appSecret) {
-          alert("请填写有道AppKey和AppSecret");
+          alert('请填写有道AppKey和AppSecret');
           return;
         }
       }
@@ -903,7 +903,7 @@ const app = new Vue({
 
       const toTranslate = this.diffItems.filter(d => (d.type === 'added' || d.type === 'changed'));
       if (!toTranslate.length) {
-        alert("没有需要翻译的差异项");
+        alert('没有需要翻译的差异项');
         return;
       }
 
@@ -925,7 +925,7 @@ const app = new Vue({
 
         // 检查翻译结果是否有效
         if (translations.length === 0 || translations.every(t => !t.trim())) {
-          alert("翻译失败: 未返回有效翻译结果。请检查API配置和网络连接");
+          alert('翻译失败: 未返回有效翻译结果。请检查API配置和网络连接');
           continue;
         } else {
           translationSucceeded = true;
@@ -952,7 +952,7 @@ const app = new Vue({
      */
     formatFixedTranslations() {
       const translations = this.fixedTranslations[this.translationLang] || [];
-      return translations.map(item => `- ${item.term}: "${item.translation}"`).join("\n");
+      return translations.map(item => `- ${item.term}: "${item.translation}"`).join('\n');
     },
 
 
@@ -961,7 +961,7 @@ const app = new Vue({
      * @returns {string} 格式化后的字符串
      */
     formatKeepTranslations() {
-      return this.keepTranslations.map(term => `- ${term}`).join("\n");
+      return this.keepTranslations.map(term => `- ${term}`).join('\n');
     },
 
 
@@ -972,18 +972,18 @@ const app = new Vue({
     getSourceLangPrompt() {
       if (this.sourceLang === 'auto') {
         if (this.selectedApi === 'deepseek') {
-          return "自动检测源语言";
+          return '自动检测源语言';
         } else {
-          return "automatically detect the source language";
+          return 'automatically detect the source language';
         }
       } else if (this.sourceLang === 'en') {
-        return "English";
+        return 'English';
       } else if (this.sourceLang === 'zhCN') {
-        return "简体中文";
+        return '简体中文';
       } else if (this.sourceLang === 'zhTW') {
-        return "臺灣正體";
+        return '臺灣正體';
       } else {
-        return "automatically detect the source language";
+        return 'automatically detect the source language';
       }
     },
 
@@ -1009,13 +1009,13 @@ const app = new Vue({
      */
     async translateOpenAI(query) {
       if (!this.openai.apiKey) {
-        console.error("OpenAI API 密钥未配置");
+        console.error('OpenAI API 密钥未配置');
         return [];
       }
 
       const messages = [
         {
-          role: "system",
+          role: 'system',
           content: `You are a translation expert specializing in Minecraft shader settings. Please translate the following content from ${this.getSourceLangPrompt()} to ${this.getTargetLang()}.
             The following terms should be translated using fixed translations:
             ${this.formatFixedTranslations()}
@@ -1025,7 +1025,7 @@ const app = new Vue({
 
             Please note that you should only return the translated text, without engaging in conversation with the user or adding any additional content.`
         },
-        {role: "user", content: query}
+        {role: 'user', content: query}
       ];
       console.log(messages); // 这个最好是留着,方便以后新增词汇查看有没有问题
       const data = {
@@ -1045,7 +1045,7 @@ const app = new Vue({
         return result.split('\n').map(line => line.trimEnd());
 
       } catch (error) {
-        console.error("OpenAI API 错误:", error);
+        console.error('OpenAI API 错误:', error);
         return [];
       }
     },
@@ -1058,13 +1058,13 @@ const app = new Vue({
      */
     async translateDeepSeek(query) {
       if (!this.deepseek.apiKey) {
-        console.error("DeepSeek API 密钥未配置");
+        console.error('DeepSeek API 密钥未配置');
         return [];
       }
 
       const messages = [
         {
-          role: "system",
+          role: 'system',
           content: `你是一名翻译专家，专注于 Minecraft 光影设置的翻译。请将以下内容从${this.getSourceLangPrompt()}翻译为 ${this.getTargetLang()}。其中：
             以下术语应按照固定翻译方式进行翻译：
             ${this.formatFixedTranslations()}
@@ -1072,7 +1072,7 @@ const app = new Vue({
             ${this.formatKeepTranslations()}
             请注意，你只需返回翻译后的文本，不要与用户进行对话，也不要添加任何其他内容。`
         },
-        {role: "user", content: query}
+        {role: 'user', content: query}
       ];
       console.log(messages);
       const data = {
@@ -1091,7 +1091,7 @@ const app = new Vue({
         const result = resp.data.choices[0].message.content.trim();
         return result.split('\n').map(line => line.trimEnd());
       } catch (error) {
-        console.error("DeepSeek API 错误:", error);
+        console.error('DeepSeek API 错误:', error);
         return [];
       }
     },
@@ -1103,7 +1103,7 @@ const app = new Vue({
      */
     async translateYoudao(query) {
       if (!this.youdao.appKey || !this.youdao.appSecret) {
-        console.error("有道AppKey或AppSecret未配置");
+        console.error('有道AppKey或AppSecret未配置');
         return [];
       }
 
@@ -1125,7 +1125,7 @@ const app = new Vue({
         from: this.youdao.from,
         to: this.youdao.to,
         sign,
-        signType: "v3",
+        signType: 'v3',
         curtime,
       };
       return new Promise(resolve => {
