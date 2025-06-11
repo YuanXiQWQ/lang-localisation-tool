@@ -1,6 +1,6 @@
 # Minecraft 语言文件自动本地化工具
 
-中文 | [English](#minecraft-language-file-auto-localisation-tool)
+简体中文 | [臺灣正體](#minecraft-語言檔自動在地化工具) | [English](#minecraft-language-file-auto-localisation-tool)
 
 ---
 
@@ -44,7 +44,7 @@
 
 ### 配置详情
 
-- **固定翻译词汇：** 固定翻译词汇会根据目标语言（简体中文或臺灣正體）自动更新，保证 Minecraft 专业术语的一致性。如果有新的点子请
+- **固定翻译词汇：** 固定翻译词汇会根据目标语言（简体中文或臺灣正體）自动更新，保证 Minecraft 专业术语的一致性。若有新想法，欢迎
   [加入讨论](https://github.com/YuanXiQWQ/lang-localisation-tool/discussions) 或
   [提交 Issue](https://github.com/YuanXiQWQ/lang-localisation-tool/issues)。
 
@@ -55,15 +55,74 @@
 
 ### 许可证
 
-本项目采用 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) 许可证。该许可证拥有下列非正式翻译版本，仅供参考。
+本项目采用 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) 许可证。该许可证拥有[非正式翻译版本](https://www.chinasona.org/gnu/agpl-3.0-cn.html)，仅供参考。
 
-[简体中文](https://www.chinasona.org/gnu/agpl-3.0-cn.html) | [臺灣正體](https://www.chinasona.org/gnu/agpl-3.0-tw.html)
+---
+
+# Minecraft 語言檔自動在地化工具
+
+[简体中文](#minecraft-语言文件自动本地化工具) | 臺灣正體 | [English](#minecraft-language-file-auto-localisation-tool)
+
+---
+
+### 目錄
+
+[介紹](#介紹) | [功能](#功能) | [引用](#引用) | [安裝](#安裝) | [使用方法](#使用方法) | [設定詳情](#設定詳情) | [故障排除](#故障排除) | [授權條款](#授權條款)
+
+### 介紹
+
+一款基於網頁的 Minecraft `.lang` 語言檔自動在地化工具，支援同一檔案的更新翻譯。  
+透過比對舊版與新版的原始語言檔以及舊版翻譯檔，偵測出新增、刪減與變動的項目，  
+再利用翻譯 API 自動產生翻譯結果，最終生成可直接使用的在地化語言檔。
+
+### 功能
+
+- 自動偵測原始語言檔中的新增、刪減與變動，並以不同顏色標示。
+- 支援選擇原始語言（自動偵測、英文、簡體中文、臺灣正體、<待新增>）與目標翻譯語言（簡體中文、臺灣正體、<待新增>）。
+- 整合 OpenAI 與 DeepSeek API。（DeepSeek API 尚未測試，目前無測試條件）
+- 固定翻譯詞彙會依照目標語言自動調整，以確保 Minecraft 專業術語的一致性。
+- 生成的在地化檔案格式符合 Minecraft 語言檔要求，可直接覆蓋原檔案。
+
+### 引用
+
+程式碼繼承自專案 [gitkraken-chinese](https://github.com/yk47g/gitkraken-chinese) 中 [@DreamSaddle](https://github.com/DreamSaddle) 所建構的 `compare.html` 檔案。  
+目前該專案主要由本人維護，並逐步更新為現在的 `comparator.html`。  
+由於本人也有參與 BSL 光影的中文化專案，因此將 `comparator.html` 改寫為可支援 Minecraft `.lang` 檔案的版本。
+
+### 安裝
+
+1. Clone 專案倉庫
+2. 啟動本地伺服器（建議使用 VS Code 的 Live Server 外掛或其他靜態伺服器）
+3. 使用瀏覽器開啟
+
+### 使用方法
+
+1. 填寫「API 設定」區域
+2. 分別上傳舊版原始語言檔、新版原始語言檔與舊版翻譯檔（皆為 `.lang` 格式）。
+3. 點擊【比對】按鈕檢測檔案差異，接著點擊【自動翻譯】按鈕自動產生翻譯。
+4. 使用【匯出 lang 檔案】或【複製到剪貼簿】以取得生成的在地化檔案，覆蓋原檔後重新啟動 Minecraft。
+5. 若需從頭建立一個在地化檔案，可在「舊版原始語言檔」與「舊版翻譯檔」中上傳空的 `.lang` 檔案
+
+### 設定詳情
+
+- **固定翻譯詞彙：** 固定翻譯詞彙會根據目標語言（简体中文或臺灣正體）自動更新，以確保 Minecraft 專業術語的一致性。若有新想法，歡迎  
+  [參與討論](https://github.com/YuanXiQWQ/lang-localisation-tool/discussions) 或
+  [回報 Issue](https://github.com/YuanXiQWQ/lang-localisation-tool/issues)。
+
+### 故障排除
+
+- **API 呼叫失敗：** 請確認 API 設定是否正確、網路連線是否正常；若使用 DeepSeek，請關注其服務狀態。
+- **無差異提示：** 請確認新版與舊版原始語言檔確實存在差異。
+
+### 授權條款
+
+本專案採用 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.html) 授權條款。該授權條款提供[非正式譯本](https://www.chinasona.org/gnu/agpl-3.0-tw.html)，僅供參考。
 
 ---
 
 # Minecraft Language File Auto-Localisation Tool
 
-[中文](#minecraft-语言文件自动本地化工具) | English
+[简体中文](#minecraft-语言文件自动本地化工具) | [臺灣正體](#minecraft-語言檔自動在地化工具) | English
 
 ---
 
@@ -117,5 +176,4 @@ Since I also manage a BSL shader Chinese localisation project, I have adapted `c
 ### Licence
 
 This project is licenced under the [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html) licence.
-This licence has
-[unofficial translated versions](https://www.gnu.org/licenses/translations.en.html), for reference only.
+[Unofficial translations](https://www.gnu.org/licenses/translations.en.html) of this licence are available in multiple languages, for reference only.
