@@ -1,0 +1,70 @@
+# 比较器页面或工作流更新时自动校验；main 分支校验通过后部署。
+name: Deploy comparator to GitHub Pages
+
+on:
+  push:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  pull_request:
+    paths:
+      - 'docs/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+
+      - name: Validate Pages files
+        shell: bash
+        run: |
+          test -f docs/index.html
+          test -f docs/.nojekyll
+          test -f docs/assets/css/comparator.css
+          test -f docs/assets/js/comparator.js
+
+      - name: Validate JavaScript syntax
+        run: node --check docs/assets/js/comparator.js
+
+  deploy:
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    needs: validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+      contents: read
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: docs
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

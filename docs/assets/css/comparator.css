@@ -1,0 +1,201 @@
+/**
+ * @file 比较器的 API 配置、控制台、差异结果及响应式布局样式。
+ */
+
+body{
+  font-family: 'Arial', sans-serif;
+}
+
+li{
+  list-style: none;
+}
+
+fieldset{
+  padding: 0.5em;
+  margin: 1px;
+}
+
+button:hover{
+  cursor: pointer;
+}
+
+header{
+  height: 32px;
+}
+
+.header-anchor{
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.header-anchor-logo{
+  display: inline-block;
+  padding: 1px;
+  height: 30px;
+}
+
+.APIConfig{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group{
+  display: flex;
+  align-items: center;
+}
+
+.input-group label{
+  width: 200px;
+  margin-right: 10px;
+}
+
+.APIConfig button{
+  width: 200px;
+}
+
+.selectForm{
+  width: 15em;
+  box-sizing: border-box;
+}
+
+#introduction{
+  background-color: #F5F5F5;
+  padding: 0.5em 0.5em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.introduction-list,
+.introduction-list-li{
+  padding: 0;
+  margin: 0 0 0 4px;
+  list-style: decimal;
+}
+
+.operation{
+  min-height: 75vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.console{
+  display: grid;
+  grid-template-rows: 2em 2em 2em 2em 1fr auto;
+  gap: 4px;
+}
+
+.console-btns{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.console-btns2{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  height: 2em;
+}
+
+.input-group{
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.input-group label{
+  width: 230px;
+}
+
+#sp{
+  margin-right: 6px;
+}
+
+#textFile{
+  width: 100%;
+  height: 95%;
+  overflow: auto;
+  margin-top: 10px;
+  resize: none;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+summary{
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.diff-green{
+  color: green;
+}
+
+.diff-red{
+  color: red;
+}
+
+.diff-blue{
+  color: blue;
+}
+
+.error-message{
+  margin-left: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.save-message{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.save-message.success{
+  color: green;
+}
+
+.save-message.error{
+  color: red;
+}
+
+#copyright{
+  text-align: left;
+  margin: auto auto 0.5em 0;
+}
+
+@media (max-width: 1001px){
+  .operation{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.diff-blue{
+  color: blue;
+}
+
+.error-message{
+  margin-left: 10px;
+  color: red;
+  font-weight: bold;
+}
+
+.save-message{
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.save-message.success{
+  color: green;
+}
+
+.save-message.error{
+  color: red;
+}

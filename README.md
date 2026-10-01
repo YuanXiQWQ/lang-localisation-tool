@@ -25,14 +25,17 @@
 ### 引用
 
 代码继承自项目 [gitkraken-chinese](https://github.com/yk47g/gitkraken-chinese) 中 [@DreamSaddle](https://github.com/DreamSaddle) 构建的 `compare.html` 文件。  
-该项目目前主要由本人维护，并逐渐更新为现在的 `comparator.html`。  
-由于本人也有 BSL 光影的汉化项目，因此将 `comparator.html` 改写为适配 Minecraft `.lang` 文件的版本。
+该项目目前主要由本人维护。由于本人也有 BSL 光影的汉化项目，因此将该工具改写为适配 Minecraft `.lang` 文件的版本。
 
 ### 安装
 
+在线版本部署后可访问：[语言文件自动本地化工具](https://YuanXiQWQ.github.io/lang-localisation-tool/)。
+
 1. 克隆项目仓库
 2. 启动本地服务器（推荐使用 VS Code 的 Live Server 插件或其他静态服务器）
-3. 在浏览器中访问
+3. 在浏览器中访问 `docs/index.html`
+
+开发、与上游同步及 GitHub Pages 配置见 [维护说明](CONTRIBUTING.md)。
 
 ### 使用方法
 
@@ -86,14 +89,17 @@
 ### 引用
 
 程式碼繼承自專案 [gitkraken-chinese](https://github.com/yk47g/gitkraken-chinese) 中 [@DreamSaddle](https://github.com/DreamSaddle) 所建構的 `compare.html` 檔案。  
-目前該專案主要由本人維護，並逐步更新為現在的 `comparator.html`。  
-由於本人也有參與 BSL 光影的中文化專案，因此將 `comparator.html` 改寫為可支援 Minecraft `.lang` 檔案的版本。
+目前該專案主要由本人維護。由於本人也有參與 BSL 光影的中文化專案，因此將此工具改寫為可支援 Minecraft `.lang` 檔案的版本。
 
 ### 安裝
 
+線上版本部署後可存取：[語言檔自動在地化工具](https://YuanXiQWQ.github.io/lang-localisation-tool/)。
+
 1. Clone 專案倉庫
 2. 啟動本地伺服器（建議使用 VS Code 的 Live Server 外掛或其他靜態伺服器）
-3. 使用瀏覽器開啟
+3. 使用瀏覽器開啟 `docs/index.html`
+
+開發、與上游同步及 GitHub Pages 設定請參閱 [維護說明](CONTRIBUTING.md)。
 
 ### 使用方法
 
@@ -145,14 +151,17 @@ A web-based tool for automatically localising Minecraft `.lang` language files. 
 ### Credits
 
 The code is derived from the [gitkraken-chinese](https://github.com/yk47g/gitkraken-chinese) project, specifically from the `compare.html` file constructed by [@DreamSaddle](https://github.com/DreamSaddle).  
-This project is primarily maintained by me and is gradually being updated to the current `comparator.html`.  
-Since I also manage a BSL shader Chinese localisation project, I have adapted `comparator.html` to suit Minecraft `.lang` files.
+This project is primarily maintained by me. Since I also manage a BSL shader Chinese localisation project, I have adapted this tool to suit Minecraft `.lang` files.
 
 ### Installation
 
+Once deployed, the online version is available at [Minecraft Language File Auto Localisation Tool](https://YuanXiQWQ.github.io/lang-localisation-tool/).
+
 1. Clone the project repository.
 2. Start a local server (using VS Code’s Live Server plugin, or any other static server is recommended).
-3. Access the tool via your web browser.
+3. Open `docs/index.html` in your browser.
+
+See [maintenance instructions](CONTRIBUTING.md) for development, upstream synchronisation and GitHub Pages setup.
 
 ### Usage
 
