@@ -278,7 +278,7 @@ const app = Vue.createApp({
     exportFile() {
       const content = this.generatedContent;
       if (!content.trim()) {
-        this.errorMsg = '没有可以导出的内容';
+        this.errorMsg = '没有可以导出的内容。';
         return;
       }
 
@@ -299,14 +299,14 @@ const app = Vue.createApp({
     async copyToClipboard() {
       const content = this.generatedContent;
       if (!content.trim()) {
-        this.errorMsg = '没有可以复制的内容';
+        this.errorMsg = '没有可以复制的内容。';
         return;
       }
 
       try {
         await navigator.clipboard.writeText(content);
       } catch (e) {
-        this.errorMsg = '复制失败，请手动复制';
+        this.errorMsg = '复制失败，请手动复制。';
       }
     },
 
@@ -330,7 +330,7 @@ const app = Vue.createApp({
       }
       const fileInput = document.getElementById(inputId);
       if (!fileInput.files[0]) {
-        this.errorMsg = '未选择文件';
+        this.errorMsg = '未选择文件。';
         return;
       }
       const reader = new FileReader();
@@ -544,7 +544,7 @@ const app = Vue.createApp({
       this.errorMsg = null;
       this.translationMessage = '';
 
-      // 验证API配置
+      // 验证 API 配置
       if (this.selectedApi === 'openai') {
         if (!this.openai.apiKey) {
           this.errorMsg = '请填写 OpenAI API 密钥。';
@@ -1238,7 +1238,7 @@ const app = Vue.createApp({
       this.modelsLoadCompleted[provider] = false;
 
       if (showLoading) {
-        this.modelMessage = '正在获取模型...';
+        this.modelMessage = '正在获取模型……';
         this.modelMessageType = 'success';
       }
 
@@ -1465,7 +1465,7 @@ const app = Vue.createApp({
      * 保存 API 配置。
      */
     async saveKeys() {
-      // 获取 AppKey和 AppSecret 或 OpenAI API 密钥的表单内容
+      // 获取 AppKey 和 AppSecret 或 OpenAI API 密钥的表单内容
       if (this.selectedApi === 'openai') {
         const apiKey = this.openai.apiKey.trim();
 
@@ -1579,7 +1579,7 @@ const app = Vue.createApp({
             errorMessage += '网关超时';
             break;
           default:
-            errorMessage += `未知错误 (HTTP ${status})`;
+            errorMessage += `未知错误（HTTP ${status}）`;
         }
 
         // 附带后端返回的具体 code 与 message，便于排查

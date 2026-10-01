@@ -184,6 +184,10 @@ header{
   margin-bottom: 4px;
 }
 
+.console-inputs label{
+  flex: 0 0 10em;
+}
+
 #console-textarea{
   flex: 1;
   overflow: auto;
