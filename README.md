@@ -18,7 +18,9 @@
 
 - 自动检测源语言文件中的新增、删减和改动，并用不同颜色标识。
 - 支持选择源语言（自动检测、英文、简体中文、臺灣正體、<待添加>）和目标翻译语言（简体中文、臺灣正體、<待添加>）。
-- 集成 OpenAI 和 DeepSeek API。（DeepSeek API 未经测试，当前没有测试条件）
+- 集成 OpenAI、DeepSeek 和有道 API。
+- 自动加载可用模型、显示价格档位与 DeepSeek 峰谷时段，支持模型推理强度设置。
+- 按配置进度显示模型和保存按钮，提供翻译状态与具体错误提示。
 - 固定翻译词汇根据目标语言自动调整，保证 Minecraft 专业术语的一致性。
 - 生成的本地化文件格式符合 Minecraft 语言文件要求，可直接覆盖原文件。
 
@@ -34,8 +36,6 @@
 1. 克隆项目仓库
 2. 启动本地服务器（推荐使用 VS Code 的 Live Server 插件或其他静态服务器）
 3. 在浏览器中访问 `docs/index.html`
-
-开发、与上游同步及 GitHub Pages 配置见 [维护说明](CONTRIBUTING.md)。
 
 ### 使用方法
 
@@ -82,7 +82,9 @@
 
 - 自動偵測原始語言檔中的新增、刪減與變動，並以不同顏色標示。
 - 支援選擇原始語言（自動偵測、英文、簡體中文、臺灣正體、<待新增>）與目標翻譯語言（簡體中文、臺灣正體、<待新增>）。
-- 整合 OpenAI 與 DeepSeek API。（DeepSeek API 尚未測試，目前無測試條件）
+- 整合 OpenAI、DeepSeek 與有道 API。
+- 自動取得可用模型、顯示價格級距與 DeepSeek 尖離峰時段，支援推理強度設定。
+- 依照設定進度顯示模型與儲存按鈕，提供翻譯狀態與具體錯誤提示。
 - 固定翻譯詞彙會依照目標語言自動調整，以確保 Minecraft 專業術語的一致性。
 - 生成的在地化檔案格式符合 Minecraft 語言檔要求，可直接覆蓋原檔案。
 
@@ -98,8 +100,6 @@
 1. Clone 專案倉庫
 2. 啟動本地伺服器（建議使用 VS Code 的 Live Server 外掛或其他靜態伺服器）
 3. 使用瀏覽器開啟 `docs/index.html`
-
-開發、與上游同步及 GitHub Pages 設定請參閱 [維護說明](CONTRIBUTING.md)。
 
 ### 使用方法
 
@@ -144,7 +144,9 @@ A web-based tool for automatically localising Minecraft `.lang` language files. 
 
 - Automatically detects new, removed, and modified entries in the source language file, highlighting them in different colours.
 - Supports selection of source language (auto-detect, English, Simplified Chinese, Traditional Chinese (Taiwan), <to be added>) and target translation language (Simplified Chinese, Traditional Chinese (Taiwan), <to be added>).
-- Integrates with OpenAI and DeepSeek APIs. (Note: DeepSeek API has not been tested due to current limitations.)
+- Integrates with OpenAI, DeepSeek and Youdao APIs.
+- Automatically loads available models, displays price tiers and DeepSeek peak/off-peak indicators, and supports reasoning effort settings.
+- Shows model and save controls progressively, with translation progress and detailed errors.
 - Automatically adjusts fixed translation terms based on the target language to ensure consistency in Minecraft-specific terminology.
 - Generates localisation files in a format compliant with Minecraft language file requirements, allowing direct replacement of the original file.
 
@@ -160,8 +162,6 @@ Once deployed, the online version is available at [Minecraft Language File Auto 
 1. Clone the project repository.
 2. Start a local server (using VS Code’s Live Server plugin, or any other static server is recommended).
 3. Open `docs/index.html` in your browser.
-
-See [maintenance instructions](CONTRIBUTING.md) for development, upstream synchronisation and GitHub Pages setup.
 
 ### Usage
 

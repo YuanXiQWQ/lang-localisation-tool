@@ -1,7 +1,9 @@
 /**
- * @file 比较器的 API 配置、控制台、差异结果及响应式布局样式。
+ * @file 比较器页面样式。
+ * 定义 API 配置、控制台、差异结果、使用说明及响应式布局。
  */
 
+/* 基础元素 */
 body{
   font-family: 'Arial', sans-serif;
 }
@@ -19,6 +21,12 @@ button:hover{
   cursor: pointer;
 }
 
+button:disabled{
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+/* 页头与项目入口 */
 header{
   height: 32px;
 }
@@ -36,6 +44,7 @@ header{
   height: 30px;
 }
 
+/* API 配置区域 */
 .APIConfig{
   display: flex;
   flex-direction: column;
@@ -45,10 +54,11 @@ header{
 .input-group{
   display: flex;
   align-items: center;
+  margin-bottom: 4px;
 }
 
 .input-group label{
-  width: 200px;
+  width: 230px;
   margin-right: 10px;
 }
 
@@ -61,11 +71,83 @@ header{
   box-sizing: border-box;
 }
 
+/* DeepSeek 峰谷时段状态 */
+.time-context{
+  margin-left: 10px;
+  font-weight: normal;
+}
+
+.deepseek-time-status{
+  margin-left: 4px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.deepseek-time-status.peak{
+  color: #D32F2F;
+}
+
+.deepseek-time-status.off-peak{
+  color: #2E7D32;
+}
+
+.field-link{
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+/* Vue 抽屉过渡动画 */
+.reasoning-drawer-enter-active,
+.reasoning-drawer-leave-active{
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.2s ease, margin-bottom 0.25s ease;
+}
+
+.reasoning-drawer-enter,
+.reasoning-drawer-enter-from,
+.reasoning-drawer-leave-to{
+  max-height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+.reasoning-drawer-enter-to,
+.reasoning-drawer-leave,
+.reasoning-drawer-leave-from{
+  max-height: 40px;
+  margin-bottom: 4px;
+  opacity: 1;
+}
+
+.step-drawer-enter-active,
+.step-drawer-leave-active{
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.2s ease,
+  margin-bottom 0.3s ease, transform 0.3s ease;
+}
+
+.step-drawer-enter,
+.step-drawer-enter-from,
+.step-drawer-leave-to{
+  max-height: 0;
+  margin-bottom: 0;
+  opacity: 0;
+  transform: translateY(-6px);
+}
+
+.step-drawer-enter-to,
+.step-drawer-leave,
+.step-drawer-leave-from{
+  max-height: 200px;
+  margin-bottom: 4px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 使用说明区域 */
 #introduction{
   background-color: #F5F5F5;
-  padding: 0.5em 0.5em 0;
-  display: flex;
-  flex-direction: column;
+  padding: 0.5em;
 }
 
 .introduction-list,
@@ -75,15 +157,16 @@ header{
   list-style: decimal;
 }
 
+/* 控制台与说明栏布局 */
 .operation{
   min-height: 75vh;
   display: grid;
   grid-template-columns: 3fr 1fr;
 }
 
-.console{
-  display: grid;
-  grid-template-rows: 2em 2em 2em 2em 1fr auto;
+#console{
+  display: flex;
+  flex-direction: column;
   gap: 4px;
 }
 
@@ -91,23 +174,19 @@ header{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-}
-
-.console-btns2{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
+  margin-bottom: 4px;
   height: 2em;
 }
 
-.input-group{
+.console-inputs{
   display: flex;
   align-items: center;
   margin-bottom: 4px;
 }
 
-.input-group label{
-  width: 230px;
+#console-textarea{
+  flex: 1;
+  overflow: auto;
 }
 
 #sp{
@@ -129,6 +208,7 @@ summary{
   cursor: pointer;
 }
 
+/* 差异结果与状态提示 */
 .diff-green{
   color: green;
 }
@@ -160,11 +240,28 @@ summary{
   color: red;
 }
 
-#copyright{
-  text-align: left;
-  margin: auto auto 0.5em 0;
+.status-message{
+  margin-left: 10px;
+  font-weight: bold;
 }
 
+.status-message.success{
+  color: green;
+}
+
+.status-message.error{
+  color: red;
+}
+
+.disc-list-item{
+  list-style: circle;
+}
+
+.warning-text{
+  color: #F00;
+}
+
+/* 响应式布局 */
 @media (max-width: 1001px){
   .operation{
     display: grid;
@@ -172,30 +269,40 @@ summary{
   }
 }
 
-button:disabled{
-  cursor: not-allowed;
-  opacity: 0.55;
-}
+@media (max-width: 768px){
+  .operation{
+    grid-template-columns: 1fr;
+  }
 
-.diff-blue{
-  color: blue;
-}
+  .input-group{
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-.error-message{
-  margin-left: 10px;
-  color: red;
-  font-weight: bold;
-}
+  .input-group label{
+    width: 100%;
+    margin-right: 0;
+  }
 
-.save-message{
-  margin-left: 10px;
-  font-weight: bold;
-}
+  .selectForm{
+    width: 100%;
+    max-width: none;
+  }
 
-.save-message.success{
-  color: green;
-}
+  .console-inputs{
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 
-.save-message.error{
-  color: red;
+  .console-inputs label{
+    flex: 0 0 100%;
+  }
+
+  .console-btns{
+    height: auto;
+  }
+
+  #textFile{
+    min-height: 320px;
+  }
 }
